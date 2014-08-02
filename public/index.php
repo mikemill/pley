@@ -9,8 +9,6 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => __DIR__ . '/../src/views',
 ));
 
-$app['debug'] = true;
-
 // Define the paths
 $app->get('/', 'Pley\\Controllers\\Index::index');
 $app->get('/register', 'Pley\\Controllers\\Index::register');
