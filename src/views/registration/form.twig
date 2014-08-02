@@ -1,0 +1,26 @@
+{% block registration_header %}
+<h1>Registration</h1>
+{% endblock %}
+<p>Please register in order to use our product</p>
+<form role="form" id="registration-form" action="/user/register" method="post">
+    <div class="form-group">
+        <label for="first-name">First name</label>
+        <input type="text" class="form-control" name="first_name" id="first-name" required value="first">
+    </div>
+    <div class="form-group">
+        <label for="last-name">Last name</label>
+        <input type="text" class="form-control" name="last_name" id="last-name" required value="last">
+    </div>
+    <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" class="form-control" name="email" id="email" required value="test@test.com">
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" name="password" id="password" required value="12345">
+    </div>
+    {% block registraion_submit %}
+    <button type="submit" class="btn btn-default">Submit</button>
+    {% endblock %}
+</form>
+

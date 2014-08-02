@@ -1,17 +1,21 @@
 body {
-  padding-top: 50px;
+  padding-top: 100px;
 }
 
-.navbar {
+.navbar-inverse {
     background-color: rgb(62, 183, 189);
     height: 84px;
 }
 
-.navbar a {
+.navbar-inverse .navbar-nav > li > a {
     color: white;
 }
 
-.navbar .navbar-brand {
+.navbar-inverse .navbar-nav > li > a:hover {
+    background-color: #4fc0c6;
+}
+
+.navbar-inverse .navbar-brand {
     background-image: url(https://www.pley.com/images/logo-original.png);
     height: 84px;
     width: 120px;

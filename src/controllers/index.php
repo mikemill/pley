@@ -10,5 +10,10 @@ namespace Pley\Controllers
         {
             return $app['twig']->render('index.twig');
         }
+
+        public static function register(Application $app)
+        {
+            return $app['twig']->render('registration/register.twig');
+        }
     }
 }

@@ -13,6 +13,9 @@ $app['debug'] = true;
 
 // Define the paths
 $app->get('/', 'Pley\\Controllers\\Index::index');
+$app->get('/register', 'Pley\\Controllers\\Index::register');
+
+$app->post('/user/register', 'Pley\\Controllers\\User::register');
 
 // Start the application
 $app->run();
