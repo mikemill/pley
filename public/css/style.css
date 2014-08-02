@@ -1,0 +1,21 @@
+body {
+  padding-top: 50px;
+}
+
+.navbar {
+    background-color: rgb(62, 183, 189);
+    height: 84px;
+}
+
+.navbar a {
+    color: white;
+}
+
+.navbar .navbar-brand {
+    background-image: url(https://www.pley.com/images/logo-original.png);
+    height: 84px;
+    width: 120px;
+    text-indent: -999px;
+    background-size: 104px 68px;
+    background-repeat: no-repeat;
+}
