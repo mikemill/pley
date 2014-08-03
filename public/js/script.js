@@ -27,4 +27,30 @@ $(document).ready(function() {
 
         event.preventDefault();
     });
+
+    // Check to see if the browser supports the form attribute on the button
+    if(!$('#registration-modal-submit')[0]['form'])
+    {
+        $('#registration-modal-submit').on('click', function() {
+            var $form = $('#registration-form');
+            var can_submit = true;
+
+            $('input', $form).each(function() {
+                var $parent = $(this).parent();
+                var valid = this.checkValidity();
+                can_submit &= valid;
+
+                $parent.toggleClass('has-error', !valid);
+            });
+
+            if (can_submit)
+            {
+                $form.submit();
+            }
+            else
+            {
+                bootbox.alert("Please correct the errors in the form");
+            }
+        });
+    }
 });
